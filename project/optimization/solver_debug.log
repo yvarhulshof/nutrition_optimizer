@@ -1,0 +1,25 @@
+2025-01-02 17:46:18,442 - [INFO] - ilp_solver.py:36 - Starting optimization with constraints: {'min_calories': '0', 'max_calories': '', 'min_protein': '', 'min_fiber': '5', 'max_sugars': '', 'min_vitamin_c': ''}
+2025-01-02 17:46:18,444 - [DEBUG] - ilp_solver.py:85 - Wrote LP model to C:\Users\yvarh\Code\Nutrition Optimizer\project\optimization\model.lp
+2025-01-02 17:46:18,490 - [INFO] - ilp_solver.py:95 - Solver finished. Status: Optimal
+2025-01-02 17:46:18,490 - [INFO] - ilp_solver.py:99 - Optimal objective value: 0.4
+2025-01-02 17:46:18,490 - [DEBUG] - ilp_solver.py:115 - Selected 2.0 units of brown_rice_cooked
+2025-01-02 17:46:31,411 - [INFO] - ilp_solver.py:36 - Starting optimization with constraints: {'min_calories': '0', 'max_calories': '', 'min_protein': '', 'min_fiber': '5', 'max_sugars': '', 'min_vitamin_c': ''}
+2025-01-02 17:46:31,413 - [DEBUG] - ilp_solver.py:85 - Wrote LP model to C:\Users\yvarh\Code\Nutrition Optimizer\project\optimization\model.lp
+2025-01-02 17:46:31,428 - [INFO] - ilp_solver.py:95 - Solver finished. Status: Optimal
+2025-01-02 17:46:31,428 - [INFO] - ilp_solver.py:99 - Optimal objective value: 0.4
+2025-01-02 17:46:31,428 - [DEBUG] - ilp_solver.py:115 - Selected 2.0 units of brown_rice_cooked
+2025-01-02 17:49:25,210 - [INFO] - ilp_solver.py:36 - Starting optimization with constraints: {'min_calories': '1000', 'max_calories': '2000', 'min_protein': '140', 'min_fiber': '10', 'max_sugars': '', 'min_vitamin_c': ''}
+2025-01-02 17:49:25,212 - [DEBUG] - ilp_solver.py:85 - Wrote LP model to C:\Users\yvarh\Code\Nutrition Optimizer\project\optimization\model.lp
+2025-01-02 17:49:25,247 - [INFO] - ilp_solver.py:95 - Solver finished. Status: Optimal
+2025-01-02 17:49:25,247 - [INFO] - ilp_solver.py:99 - Optimal objective value: 5.6
+2025-01-02 17:49:25,247 - [DEBUG] - ilp_solver.py:115 - Selected 2.0 units of chicken_breast
+2025-01-02 17:49:25,247 - [DEBUG] - ilp_solver.py:115 - Selected 2.0 units of oatmeal
+2025-01-02 17:49:25,253 - [DEBUG] - ilp_solver.py:115 - Selected 5.0 units of brown_rice_cooked
+2025-01-02 17:49:46,113 - [INFO] - ilp_solver.py:36 - Starting optimization with constraints: {'min_calories': '1000', 'max_calories': '2000', 'min_protein': '140', 'min_fiber': '10', 'max_sugars': '20', 'min_vitamin_c': '1'}
+2025-01-02 17:49:46,115 - [DEBUG] - ilp_solver.py:85 - Wrote LP model to C:\Users\yvarh\Code\Nutrition Optimizer\project\optimization\model.lp
+2025-01-02 17:49:46,171 - [INFO] - ilp_solver.py:95 - Solver finished. Status: Optimal
+2025-01-02 17:49:46,171 - [INFO] - ilp_solver.py:99 - Optimal objective value: 5.8
+2025-01-02 17:49:46,171 - [DEBUG] - ilp_solver.py:115 - Selected 2.0 units of chicken_breast
+2025-01-02 17:49:46,171 - [DEBUG] - ilp_solver.py:115 - Selected 2.0 units of oatmeal
+2025-01-02 17:49:46,171 - [DEBUG] - ilp_solver.py:115 - Selected 1.0 units of carrot
+2025-01-02 17:49:46,171 - [DEBUG] - ilp_solver.py:115 - Selected 5.0 units of brown_rice_cooked

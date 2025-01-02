@@ -1,0 +1,51 @@
+# ======================
+# Python Bytecode
+# ======================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ======================
+# Virtual Environments
+# ======================
+venv/
+env/
+.venv/
+venv.bak/
+
+# ======================
+# Distribution / Packaging
+# ======================
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# ======================
+# Logs and Debug Files
+# ======================
+*.log
+cbc_solver.log
+solver_debug.log
+model.lp
+
+# ======================
+# Editor / IDE Files
+# ======================
+.vscode/
+.idea/
+*.swp
+
+# ======================
+# OS-Specific Files
+# ======================
+.DS_Store
+Thumbs.db
+*.bak
+
+# ======================
+# Other
+# ======================
+.env
+*.env

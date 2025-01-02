@@ -1,0 +1,105 @@
+/* ==============
+   Minimalist Theme
+   ============== */
+
+/* Use a simple, modern font. 
+   You can add a Google Font link in your HTML <head> if desired. */
+   body {
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7; /* subtle light gray background */
+    color: #333;         /* darker text for good contrast */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.4;
+  }
+  
+  /* Container to center content and set max width */
+  .container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  
+  /* Minimal heading styling */
+  h1, h2, h3 {
+    font-weight: 500;
+    margin: 0.8em 0 0.3em;
+    color: #222;
+  }
+  
+  /* Card-like panels to hold form and results */
+  .card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1em 1.5em;
+    margin: 1em 0;
+  }
+  
+  /* Form fields spacing */
+  form label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+  }
+  
+  form input[type="number"] {
+    padding: 0.3em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80px; /* narrower look for numeric fields */
+    font-size: 0.95em;
+  }
+  
+  button {
+    margin-top: 1em;
+    background: #007BFF; /* modern blue button color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  /* Minimalist lists */
+  ul {
+    list-style: disc inside;
+    margin: 0.5em 0;
+    padding-left: 1em; 
+  }
+  
+  li {
+    margin: 0.2em 0;
+  }
+  
+  /* Tighter headings for each card section */
+  .card h2,
+  .card h3 {
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+  }
+  
+  /* For the solution text block */
+  pre {
+    background: #fafafa;
+    padding: 0.8em;
+    border-radius: 4px;
+    line-height: 1.3;
+    margin: 0.8em 0;
+    overflow-x: auto;
+  }
+  
+  /* For the chart container, just a little margin */
+  #chartContainer img {
+    display: block;
+    margin-top: 0.8em;
+    max-width: 100%; /* ensure it’s responsive */
+    height: auto;
+  }
+  

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrition Optimizer</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Nutrition Optimizer</h1>
+
+        <!-- Card for the form -->
+        <div class="card">
+            <form id="optimizationForm">
+                <h2>Enter Constraints</h2>
+
+                <!-- Body Weight -->
+                <label for="body_weight">Body Weight (kg):</label>
+                <input type="number" name="body_weight" id="body_weight" value="75"><br>
+
+                <!-- Calories -->
+                <label for="min_calories">Min Calories:</label>
+                <input type="number" name="min_calories" id="min_calories"><br>
+
+                <label for="max_calories">Max Calories:</label>
+                <input type="number" name="max_calories" id="max_calories"><br>
+
+                <!-- Protein -->
+                <label for="min_protein">Min Protein (g):</label>
+                <input type="number" name="min_protein" id="min_protein"><br>
+
+                <!-- Fiber -->
+                <label for="min_fiber">Min Fiber (g):</label>
+                <input type="number" name="min_fiber" id="min_fiber"><br>
+
+                <!-- Sugars -->
+                <label for="max_sugars">Max Sugars (g):</label>
+                <input type="number" name="max_sugars" id="max_sugars"><br>
+
+                <!-- Vitamin C -->
+                <label for="min_vitamin_c">Min Vitamin C (mg):</label>
+                <input type="number" name="min_vitamin_c" id="min_vitamin_c"><br>
+
+                <button type="submit">Optimize</button>
+            </form>
+        </div>
+
+        <!-- Card for results -->
+        <div class="card">
+            <h2>Results</h2>
+            <div id="result"></div>
+            <div id="chartContainer"></div>
+        </div>
+    </div>
+
+    <!-- Inline script for auto-filling default values based on body weight -->
+    <script>
+        /*
+          Default Formulas (adjust as needed):
+            - body_weight default: 75 kg
+            - min_calories = ~30 kcal/kg
+            - max_calories = ~40 kcal/kg
+            - min_protein = ~1.6 g/kg
+            - min_fiber   = ~14 g fiber / 1000 kcal * (min_calories)
+            - max_sugars, min_vitamin_c can also be set based on guidelines
+        */
+
+        function updateDefaults() {
+          const weightField = document.getElementById('body_weight');
+          const weight = parseFloat(weightField.value) || 75; // fallback if blank
+
+          // Example calculations
+          const minCalDefault = Math.round(weight * 30);   // 30 kcal/kg
+          const maxCalDefault = Math.round(weight * 40);   // 40 kcal/kg
+          const proteinDefault = Math.round(weight * 1.6); // 1.6 g/kg
+          const fiberDefault = Math.round((14 * minCalDefault) / 1000); // 14 g / 1000 kcal
+          const maxSugarsDefault = 50;   // e.g. WHO recommends <50g added sugar daily
+          const minVitCDefault = 75;     // e.g. ~75 mg for adult female
+
+          // Only set field if it's currently empty
+          const minCalsField = document.getElementById('min_calories');
+          if (!minCalsField.value) {
+            minCalsField.value = minCalDefault;
+          }
+
+          const maxCalsField = document.getElementById('max_calories');
+          if (!maxCalsField.value) {
+            maxCalsField.value = maxCalDefault;
+          }
+
+          const proteinField = document.getElementById('min_protein');
+          if (!proteinField.value) {
+            proteinField.value = proteinDefault;
+          }
+
+          const fiberField = document.getElementById('min_fiber');
+          if (!fiberField.value) {
+            fiberField.value = fiberDefault;
+          }
+
+          const sugarField = document.getElementById('max_sugars');
+          if (!sugarField.value) {
+            sugarField.value = maxSugarsDefault;
+          }
+
+          const vitCField = document.getElementById('min_vitamin_c');
+          if (!vitCField.value) {
+            vitCField.value = minVitCDefault;
+          }
+        }
+
+        // On page load, auto-fill defaults
+        window.addEventListener('load', updateDefaults);
+
+        // If user changes body weight, recalc any empty fields
+        document.getElementById('body_weight').addEventListener('input', updateDefaults);
+    </script>
+
+    <!-- Main app logic (form submission, rendering results) -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
